@@ -20,9 +20,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-     var quizBrain = QuizBrain()
+    @IBOutlet weak var tercerboton: UIButton!
+    
+    
+    var quizBrain = QuizBrain()
    
-     
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +61,10 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score: \(quizBrain.getScore())"
         trueBottom.backgroundColor = UIColor.clear
         falseBottom.backgroundColor = UIColor.clear
-        
-                    
+        tercerboton.backgroundColor = UIColor.clear
+        trueBottom.setTitle(quizBrain.getTrueBotton(), for: .normal)
+        falseBottom.setTitle(quizBrain.getFalseBotton(), for: .normal)
+        tercerboton.setTitle(quizBrain.getTercerBotton(), for: .normal)
         
     }
 }
